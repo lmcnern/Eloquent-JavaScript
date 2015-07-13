@@ -3,16 +3,12 @@
 //elements of the input arrays.
 
 
+var arrays = [
+[1, 2, 3],
+['cats', 'dogs'],
+['hamsters']
+];
 
-function reduceArrays() {
-  var arrays = [
-  [1, 2, 3, 4, 5, 6],
-  ['apples', 'bananas', 'kiwi']
-  ];
-
-  arrays.reduce(function(f, c) {
-    return f.concat(c);
-  }, []);
-}
-
-console.log(reduceArrays());
+console.log(arrays.reduce(function(res, curr) {
+  return res.concat(curr);
+}));
